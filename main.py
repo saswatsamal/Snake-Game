@@ -23,7 +23,7 @@ snake_block = 10
 snake_speed = 15
  
 font_style = pygame.font.SysFont("ubuntu", 25)
-score_font = pygame.font.SysFont("ubuntu", 10)
+score_font = pygame.font.SysFont("ubuntu", 20)
  
 def gameScore(score):
     value = score_font.render("Your Score: " + str(score), True, green)
