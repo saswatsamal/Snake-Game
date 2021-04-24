@@ -11,8 +11,8 @@ red = (213, 50, 80)
 green = (0, 255, 0)
 blue = (0,0,0)
  
-width = 1920
-height = 1080
+width = 1280
+height = 720
  
 gameDisplay = pygame.display.set_mode((width, height))
 pygame.display.set_caption('Snake Game By Saswat Samal')
