@@ -61,6 +61,27 @@ def runGame():
 
     # the main game loop
     while not gameOver:
+
+        # game close
+        while gameClose:
+            gameDisplay.fill(black)
+            gameOverMessage = messageFont.render("Game Over", True, red)
+            gameOver.blit(gameOverMessage, [width/2,height/2])
+            printScore(snakeLength-1)
+            pygame.display.update()
+
+            for event in pygame.event.get():
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_1:
+                        gameOver = True
+                        gameClose = False
+                    if event.key == pygame.K_2:
+                        runGame()
+                if event.type == pygame.QUIT:
+                    gameOver = True
+                    gameClose = False
+
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 gameOver = True
