@@ -66,7 +66,7 @@ def gameLoop():
                     if event.key == pygame.K_q:
                         game_over = True
                         game_close = False
-                    if event.key == pygame.K_c:
+                    if event.key == pygame.K_p:
                         gameLoop()
 
         for event in pygame.event.get():
