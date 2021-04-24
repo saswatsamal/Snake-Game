@@ -58,4 +58,26 @@ def runGame():
     #spawn a random target for food
     xTarget = round(random.randrange(0,width-snakeSize)/10.0) * 10.0
     yTarget = round(random.randrange(0,height-snakeSize)/10.0) * 10.0
+
+    # the main game loop
+    while not gameOver:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                gameOver = True
+                
+                # Which key we actually press
+                if event.type == pygame.KEYDOWN:
+                    # left key
+                    if event.key == pygame.K_LEFT:
+                        xSpeed = -snakeSize # negative becoz = the more we move right the x coordinate will inc so in order to go left we need to dec the x coordinate
+                        ySpeed = 0 # becoz we dont need the snake move diagonally
+                    if event.key == pygame.K_RIGHT:
+                        xSpeed = snakeSize # no movement  in X dir
+                        ySpeed = 0
+                    if event.key == pygame.K_UP:
+                        xSpeed = 0 
+                        ySpeed = -snakeSize # negative becoz = the more we move down the y coordinate will inc so in order to go up we need to dec the y coordinate
+                    if event.key == pygame.K_DOWN:
+                        xSpeed = 0
+                        ySpeed = snakeSize 
     
