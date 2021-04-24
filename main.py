@@ -64,7 +64,7 @@ def runGame():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 gameOver = True
-                
+
                 # Which key we actually press
                 if event.type == pygame.KEYDOWN:
                     # left key
@@ -80,4 +80,13 @@ def runGame():
                     if event.key == pygame.K_DOWN:
                         xSpeed = 0
                         ySpeed = snakeSize 
-    
+
+        # if we hit the boundary or go out it => close the game
+
+        if x >= width or x < 0 or y >= height or y < 0:
+            gameClose = True
+        
+        # if we do nothing - speed inc
+
+        x += xSpeed
+        y += ySpeed
