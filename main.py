@@ -25,3 +25,6 @@ clock = pygame.time.Clock()
 snakeSize = 10
 snakeSpeed = 15
 
+# Setting the font
+messageFont = pygame.font.SysFont('ubuntu', 30)
+scoreFont = pygame.font.SysFont('ubuntu', 25)
