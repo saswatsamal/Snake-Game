@@ -25,10 +25,9 @@ snake_speed = 15
 font_style = pygame.font.SysFont("ubuntu", 25)
 score_font = pygame.font.SysFont("ubuntu", 10)
  
-def Your_score(score):
+def gameScore(score):
     value = score_font.render("Your Score: " + str(score), True, green)
-    gameDisplay.blit(value, [0, 0])
- 
+    gameDisplay.blit(value, [width/2, 0])
  
  
 def our_snake(snake_block, snake_list):
@@ -60,8 +59,8 @@ def gameLoop():
  
         while game_close == True:
             gameDisplay.fill(blue)
-            message("You Lost! Press C-Play Again or Q-Quit", red)
-            Your_score(Length_of_snake - 1)
+            message("Game Over! Press P to Play Again and Press Q to Quit the game. ", green)
+            gameScore(Length_of_snake - 1)
             pygame.display.update()
  
             for event in pygame.event.get():
@@ -111,7 +110,7 @@ def gameLoop():
                 game_close = True
  
         our_snake(snake_block, snake_List)
-        Your_score(Length_of_snake - 1)
+        gameScore(Length_of_snake - 1)
 
         pygame.display.update()
  
