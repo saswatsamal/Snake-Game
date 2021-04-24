@@ -17,3 +17,6 @@ width, height = 600, 400
 
 gameDisplay = pygame.display.set_mode((width,height))
 pygame.display.set_caption("Snake Game")
+
+# Setting the clock - it will keep the whole thing running
+clock = pygame.time.Clock()
