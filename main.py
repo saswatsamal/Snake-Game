@@ -20,3 +20,8 @@ pygame.display.set_caption("Snake Game")
 
 # Setting the clock - it will keep the whole thing running
 clock = pygame.time.Clock()
+
+# Setting the snake's size and speed
+snakeSize = 10
+snakeSpeed = 15
+
