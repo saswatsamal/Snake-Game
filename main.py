@@ -1,1 +1,4 @@
-#main file
+import pygame
+import time
+import random
+
