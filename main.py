@@ -52,7 +52,7 @@ def runGame():
     ySpeed = 0
 
     # defining the snake as a list since the snake is going to grow in size
-    snakePixel = []
+    snakeList = []
     snakeLength = 1
 
     #spawn a random target for food
@@ -63,7 +63,7 @@ def runGame():
     while not gameOver:
 
         # game close
-        while gameClose:
+        while gameClose == True:
             gameDisplay.fill(black)
             gameOverMessage = messageFont.render("Game Over", True, red)
             gameOver.blit(gameOverMessage, [width/2,height/2])
@@ -72,14 +72,14 @@ def runGame():
 
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN:
-                    if event.key == pygame.K_1:
+                    if event.key == pygame.K_q:
                         gameOver = True
                         gameClose = False
-                    if event.key == pygame.K_2:
+                    if event.key == pygame.K_c:
                         runGame()
-                if event.type == pygame.QUIT:
-                    gameOver = True
-                    gameClose = False
+                # if event.type == pygame.QUIT:
+                #     gameOver = True
+                #     gameClose = False
 
 
         for event in pygame.event.get():
@@ -117,16 +117,17 @@ def runGame():
         pygame.draw.rect(gameDisplay, orange, [xTarget,yTarget,snakeSize,snakeSize])
 
         # movement of the snake wrt head and tail
-        snakePixel.append([x,y])
-        if len(snakePixel) > snakeLength:
-            del snakePixel[0]
+        snakeHead = []
+        snakeHead.append([x,y])
+        if len(snakeList) > snakeLength:
+            del snakeList[0]
 
         #collision - close
-        for pixel in snakePixel[:-1]:
-            if pixel == [x,y]: 
+        for pixel in snakeList[:-1]:
+            if pixel == snakeHead: 
                 gameClose = True
         
-        drawSnake(snakeSize, snakePixel)
+        drawSnake(snakeSize, snakeList)
         printScore(snakeLength-1)
 
         pygame.display.update()
