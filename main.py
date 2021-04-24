@@ -11,8 +11,8 @@ red = (213, 50, 80)
 green = (0, 255, 0)
 blue = (0,0,0)
  
-width = 600
-height = 400
+width = 1920
+height = 1080
  
 gameDisplay = pygame.display.set_mode((width, height))
 pygame.display.set_caption('Snake Game By Saswat Samal')
@@ -23,10 +23,10 @@ snake_block = 10
 snake_speed = 15
  
 font_style = pygame.font.SysFont("ubuntu", 25)
-score_font = pygame.font.SysFont("ubuntu", 35)
+score_font = pygame.font.SysFont("ubuntu", 10)
  
 def Your_score(score):
-    value = score_font.render("Your Score: " + str(score), True, yellow)
+    value = score_font.render("Your Score: " + str(score), True, green)
     gameDisplay.blit(value, [0, 0])
  
  
