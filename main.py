@@ -90,3 +90,34 @@ def runGame():
 
         x += xSpeed
         y += ySpeed
+
+        # setting the pygame window
+        gameDisplay.fill(black)
+        pygame.draw.rect(gameDisplay, orange, [xTarget,yTarget,snakeSize,snakeSize])
+
+        # movement of the snake wrt head and tail
+        snakePixel.append([x,y])
+        if len(snakePixel) > snakeLength:
+            del snakePixel[0]
+
+        #collision - close
+        for pixel in snakePixel[:-1]:
+            if pixel == [x,y]: 
+                gameClose = True
+        
+        drawSnake(snakeSize, snakePixel)
+        printScore(snakeLength-1)
+
+        pygame.display.update()
+
+        if x == xTarget and y == yTarget:
+            xTarget = round(random.randrange(0,width-snakeSize)/10.0) * 10.0
+            yTarget = round(random.randrange(0,height-snakeSize)/10.0) * 10.0
+            snakeLength +=1
+        
+        clock.tick(snakeSpeed)
+
+    pygame.quit()
+    quit()
+
+runGame()
