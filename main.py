@@ -4,12 +4,10 @@ import random
  
 pygame.init()
  
-white = (255, 255, 255)
+
 yellow = (255, 255, 102)
-black = (50, 153, 213)
-red = (213, 50, 80)
 green = (0, 255, 0)
-blue = (0,0,0)
+black = (0,0,0)
  
 width = 1280
 height = 720
@@ -32,7 +30,7 @@ def gameScore(score):
  
 def our_snake(snake_block, snake_list):
     for x in snake_list:
-        pygame.draw.rect(gameDisplay, black, [x[0], x[1], snake_block, snake_block])
+        pygame.draw.rect(gameDisplay, green, [x[0], x[1], snake_block, snake_block])
  
  
 def message(msg, color):
@@ -58,7 +56,7 @@ def gameLoop():
     while not game_over:
  
         while game_close == True:
-            gameDisplay.fill(blue)
+            gameDisplay.fill(black)
             message("Game Over! Press P to Play Again and Press Q to Quit the game. ", green)
             gameScore(Length_of_snake - 1)
             pygame.display.update()
@@ -95,8 +93,8 @@ def gameLoop():
         x1 += x1_change
         y1 += y1_change
 
-        gameDisplay.fill(blue)
-        pygame.draw.rect(gameDisplay, green, [foodx, foody, snake_block, snake_block])
+        gameDisplay.fill(black)
+        pygame.draw.rect(gameDisplay, yellow, [foodx, foody, snake_block, snake_block])
 
         snake_Head = []
         snake_Head.append(x1)
