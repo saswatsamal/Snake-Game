@@ -38,3 +38,24 @@ def drawSnake(snakeSize,snakePixels):
     for pixel in snakePixels:
         pygame.draw.rect(gameDisplay, white, [pixel[0], pixel[1], snakeSize, snakeSize])
 
+# Defining the functions - run function
+def runGame():
+    gameOver = False
+    gameClose = False
+
+    # define the starting postn
+    x = width/2
+    y = height/2
+
+    #setting the default speed - before starting the speed
+    xSpeed = 0
+    ySpeed = 0
+
+    # defining the snake as a list since the snake is going to grow in size
+    snakePixel = []
+    snakeLength = 1
+
+    #spawn a random target for food
+    xTarget = round(random.randrange(0,width-snakeSize)/10.0) * 10.0
+    yTarget = round(random.randrange(0,height-snakeSize)/10.0) * 10.0
+    
