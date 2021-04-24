@@ -9,7 +9,7 @@ pygame.init()
 
 # Defining the colors
 white = (255, 255, 255)
-yellow = (255, 255, 102)
+orange = (255, 255, 102)
 black = (0, 0, 0)
 red = (213, 50, 80)
 green = (0, 255, 0)
@@ -36,9 +36,13 @@ def printScore(score):
     text = scoreFont.render("Score: "+str(score), True, orange)
     gameDisplay.blit(text, [0,0])
 
-def drawSnake(snakeSize,snakePixels):
-    for pixel in snakePixels:
+def drawSnake(snakeSize,snakeList):
+    for pixel in snakeList:
         pygame.draw.rect(gameDisplay, white, [pixel[0], pixel[1], snakeSize, snakeSize])
+
+def message(msg, color):
+    gameMessage = messageFont.render(msg,True,color)
+    gameDisplay(gameMessage, [width/6, height/3])
 
 # Defining the functions - run function
 def runGame():
