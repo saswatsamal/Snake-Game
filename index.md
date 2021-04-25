@@ -17,9 +17,23 @@ This game is very simple to play. Follow the below instructions
   - Use **Q** to **Quit** the game.
 
 ## Screenshots 🖼
-Open Game | Game Play | Gave Over
------------- | ------------- | -------------
-<img src="https://github.com/saswatsamal/Snake-Game/blob/master/img/screenshot1.jpg" width=500> | <img src="https://github.com/saswatsamal/Snake-Game/blob/master/img/screenshot3.jpg" width=500> | <img src="https://github.com/saswatsamal/Snake-Game/blob/master/img/screenshot2.jpg" width=500>
-Screen when you open the application | GamePlay Screen | When you hit the walls - Game Over |
+
+Open Game
+
+<img src="https://github.com/saswatsamal/Snake-Game/blob/master/img/screenshot1.jpg" width=500>
+
+<p>Screen when you open the application</p>
+
+Game Play 
+
+<img src="https://github.com/saswatsamal/Snake-Game/blob/master/img/screenshot3.jpg" width=500> 
+
+<p>GamePlay Screen</p>
+
+Gave Over
+
+<img src="https://github.com/saswatsamal/Snake-Game/blob/master/img/screenshot2.jpg" width=500>
+
+<p>When you hit the walls - Game Over</p>
 
 
