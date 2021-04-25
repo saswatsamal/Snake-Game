@@ -18,19 +18,21 @@ This game is very simple to play. Follow the below instructions
 
 ## Screenshots 🖼
 
-Open Game
+### Open Game
 
 <img src="https://raw.githubusercontent.com/saswatsamal/Snake-Game/master/img/screenshot1.jpg" width=500>
 
 <p>Screen when you open the application</p>
 
-Game Play 
+
+### Game Play 
 
 <img src="https://raw.githubusercontent.com/saswatsamal/Snake-Game/master/img/screenshot3.jpg" width=500> 
 
 <p>GamePlay Screen</p>
 
-Gave Over
+
+### Gave Over
 
 <img src="https://raw.githubusercontent.com/saswatsamal/Snake-Game/master/img/screenshot2.jpg" width=500>
 
