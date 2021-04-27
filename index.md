@@ -1,5 +1,5 @@
-<p align="center"><a href="https://github.com/saswatsamal/Snake-Game/releases/download/v1.0-beta/main.exe"><img src="https://img.shields.io/badge/Download%20the-Game-green?style=for-the-badge&logo=retropie" />
 
+[![Built with Love](https://img.shields.io/badge/Download%20the-Game-green?style=for-the-badge&logo=retropie)](https://github.com/saswatsamal/Snake-Game/releases/download/v1.0-beta/main.exe)
 
 <img src = "https://raw.githubusercontent.com/saswatsamal/Snake-Game/master/img/header.gif">
 
