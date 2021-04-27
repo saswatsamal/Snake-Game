@@ -1,6 +1,6 @@
 import pygame
 import time
-import random
+import sys, random
  
 pygame.init()
  
@@ -22,6 +22,27 @@ snake_speed = 15
  
 font_style = pygame.font.SysFont("ubuntu", 25)
 score_font = pygame.font.SysFont("ubuntu", 20)
+
+def main_menu():
+
+    while 1:
+
+        for event in pygame.event.get():
+
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+
+
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                gameLoop()
+
+        gameDisplay.fill(black)
+
+        main_menu_message = font_style.render('Press anywhere to start the game' , True , (255,255,255))
+        font_pos = main_menu_message.get_rect(center=(width//2, height//2))
+        gameDisplay.blit(main_menu_message , font_pos)
+        pygame.display.update()
  
 def gameScore(score):
     value = score_font.render("Your Score: " + str(score), True, green)
@@ -122,5 +143,4 @@ def gameLoop():
     pygame.quit()
     quit()
  
- 
-gameLoop()
+main_menu()
