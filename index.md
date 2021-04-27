@@ -1,3 +1,5 @@
+<p align="center"><a href="https://github.com/saswatsamal/Snake-Game/releases/download/v1.0-beta/main.exe"><img src="https://img.shields.io/badge/Download%20the-Game-green?style=for-the-badge&logo=retropie" /></p>
+
 <img src = "https://raw.githubusercontent.com/saswatsamal/Snake-Game/master/img/header.gif">
 
 [![Built with Love](https://img.shields.io/badge/Made%20with-%E2%99%A5-orange?style=for-the-badge)]() [![Made With Python](https://img.shields.io/badge/Built%20with-Python-blue?style=for-the-badge&logo=python)]() [![license](https://img.shields.io/github/license/saswatsamal/Snake-Game?color=orange&style=for-the-badge)]()
