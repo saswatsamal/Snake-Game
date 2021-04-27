@@ -42,4 +42,6 @@ This game is very simple to play. Follow the below instructions
 
 <p>When you hit the walls - Game Over</p>
 
+#### Thank you readin this, hope you have played it.
 
+[![Visits Badge](https://badges.pufler.dev/visits/saswatsamal/Snake-Game?style=for-the-badge)]()
